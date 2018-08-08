@@ -7,9 +7,17 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "css-loader": "^1.0.0",
+    "express": "^4.16.3",
     "file-loader": "^1.1.11",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.7",
     "node-sass": "^4.9.2",
+    "nodemon": "^1.18.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-ionicons": "^2.1.6",
@@ -17,6 +25,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.0",
     "url-loader": "^1.0.1",
+    "validator": "^10.5.0",
     "webpack": "^4.16.5",
     "webpack-dev-server": "^3.1.5"
   },
@@ -27,7 +36,9 @@
     "build": "webpack --mode production",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dev-server": "webpack-dev-server --mode development"
+    "dev-server": "webpack-dev-server --mode development",
+    "api-start": "node server/server.js",
+    "api-server": "nodemon server/server.js"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.0"
