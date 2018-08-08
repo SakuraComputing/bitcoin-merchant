@@ -22,21 +22,21 @@ const Features = () => {
                 </div>
                 <div className="col span-1-of-4 box">
                     <Ionicon fontSize="50%" icon="ios-stopwatch-outline" color="#B15B60"></Ionicon>
-                    <h3>Make your first trade in 20 minutes</h3>
+                    <h3>Trade within 20 minutes</h3>
                     <p>
                         You're only twenty minutes away from your first adventure with the worlds premium cryptocurrency. We work with the best traders in the world to ensure that you're 100% happy.
                     </p>
                 </div>
                 <div className="col span-1-of-4 box">
                     <Ionicon fontSize="50%" icon="ios-cloud-upload" color="blue"></Ionicon>
-                    <h3>100% Safe</h3>
+                    <h3>All Transactions are 100% Safe</h3>
                     <p>
-                        All your transactions are completely secure! All our traders folow tight rules in order to guarantee a high level of satisfaction.
+                        All your transactions are completely secure! Everything is held in the cloud to give you full peace of mind over security. All our traders folow tight rules in order to guarantee a high level of satisfaction.
                     </p>
                 </div>
                 <div className="col span-1-of-4 box">
                     <Ionicon fontSize="50%" icon="ios-cart-outline" color="orange"></Ionicon>
-                    <h3>Order Any Amount</h3>
+                    <h3>Order Any Amount of Bitcoin</h3>
                     <p>
                         We don't limit your trading, you can go up to the maximum that your traders allow. It's up to you!
                     </p>

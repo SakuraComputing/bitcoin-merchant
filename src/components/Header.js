@@ -1,5 +1,5 @@
 import React from 'react'
-import bitcoin from '../src/styles/img/bitcoin-logo.jpg';
+import bitcoin from '../styles/img/bitcoin-logo.jpg';
 
 const Header = () => {
     return (
