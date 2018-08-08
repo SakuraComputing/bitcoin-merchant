@@ -38,6 +38,14 @@ body
     margin: 0 auto;
 }
 
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
 h1, h2, h3 {
     font-weight: 300;
     text-transform: uppercase;
@@ -122,4 +130,16 @@ input[type=submit] {
 input[type=submit] {
     border: 1px solid $cloud;
     color: #fff;
+}
+
+/*----------PARAGRAPHS-----------*/
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
 }
