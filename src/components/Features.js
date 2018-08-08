@@ -8,7 +8,7 @@ const Features = () => {
             <div className="row">
                 <h2>Get Coins Fast &mdash; with complete safety</h2>
                 <p className="long-copy">
-                    Hello, we’re Bitcoin Merchant, your new Bitcoin service. We know you’re always busy. So let us take care of that, purchase your bitcoins online with us you will not regret it, we promise!
+                    Hello, we’re Bitcoin Merchant, your new Bitcoin service. We know you’re always busy. So let us take care of that and take away all the fuss, purchase your bitcoins online with us you will not regret it, we promise!
                 </p>
             </div>
             
