@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import '../src/styles/styles.scss';
+import React from 'react'
 import bitcoin from '../src/styles/img/bitcoin-logo.jpg';
-import Features from './components/Features';
 
-class App extends Component {
-  render() {
+const Header = () => {
     return (
-      <div>
         <div className="header-test">
                 <nav>
                     <div className="row">
@@ -27,9 +23,7 @@ class App extends Component {
                     <a className="btn btn-ghost" href="#">Find Out More</a>
                 </div>
         </div>
-        <Features />
-      </div>
-    );
-  }
+    )
 }
-export default App;
+
+export default Header;
