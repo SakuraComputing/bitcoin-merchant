@@ -1,7 +1,7 @@
 import React from 'react'
-import bitcoinImage from '../styles/img/bitcoin.jpg';
-import appleStore from '../styles/img/download-app.svg';
-import googlePlay from '../styles/img/download-app-android.png';
+import bitcoinImage from '../../styles/img/bitcoin-logo.jpg';
+import appleStore from '../../styles/img/download-app.svg';
+import googlePlay from '../../styles/img/download-app-android.png';
 
 function Works() {
     return (

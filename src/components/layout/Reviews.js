@@ -1,7 +1,7 @@
 import React from 'react'
-import customer1 from '../styles/img/customer-1.jpg';
-import customer2 from '../styles/img/customer-2.jpg';
-import customer3 from '../styles/img/customer-3.jpg';
+import customer1 from '../../styles/img/customer-1.jpg';
+import customer2 from '../../styles/img/customer-2.jpg';
+import customer3 from '../../styles/img/customer-3.jpg';
 
 const Reviews = () => {
     return (

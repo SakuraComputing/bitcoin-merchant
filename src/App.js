@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import '../src/styles/styles.scss';
-import Header from './components/Header';
-import Features from './components/Features';
-import Works from './components/Works';
-import Reviews from './components/Reviews';
+import LandingPage from './components/layout/LandingPage';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Header />
-        <Features />
-        <Works />
-        <Reviews />
-      </div>
+      <Router>
+        <div>
+          <Route exact path="/" component={LandingPage} />
+        </div>
+      </Router>
     );
   }
 }
