@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Ionicon from 'react-ionicons';
 
 const Features = () => {

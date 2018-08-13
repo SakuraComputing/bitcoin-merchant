@@ -1,5 +1,6 @@
 import React from 'react'
 import bitcoin from '../../styles/img/bitcoin-logo.jpg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -19,7 +20,7 @@ const Header = () => {
                 </nav>
                 <div className="merchant-text-box">
                     <h1>Bitcoin is making people rich.<br></br> You can become the next millionaire....</h1>
-                    <a className="btn btn-full" href="#">Buy Coins Now!</a>
+                    <Link className="btn btn-full" to="/login">Buy Coins Now!</Link>
                     <a className="btn btn-ghost" href="#features">Find Out More</a>
                 </div>
         </div>
