@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
 
@@ -50,7 +51,6 @@ class Login extends Component {
                                             placeholder="Your Email" 
                                             onChange={this.onChange}
                                             error={errors.email}
-                                            required
                                         />
                                     </div>
                                 </div>
@@ -66,7 +66,6 @@ class Login extends Component {
                                             placeholder="Password" 
                                             onChange={this.onChange}
                                             error={errors.password}
-                                            required
                                         />
                                     </div>
                                 </div>
@@ -75,7 +74,7 @@ class Login extends Component {
                                         <label>&nbsp;</label>
                                     </div>
                                     <div class="col span-2-of-3">
-                                        <input type="submit" value="Log In"/>
+                                        <input className="btn btn-full" type="submit" value="Log In"/>
                                     </div>
                                 </div>     
                                                             
@@ -84,7 +83,7 @@ class Login extends Component {
                                         <label>&nbsp;</label>
                                     </div>
                                     <div class="col span-2-of-3">
-                                        <input type="submit" value="Register" />
+                                        <Link className="btn btn-ghost" to="/register">Register</Link>
                                     </div>
                                 </div>
                         </form>
