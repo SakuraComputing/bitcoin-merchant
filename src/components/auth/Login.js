@@ -40,11 +40,12 @@ class Login extends Component {
 
                             <form onSubmit={this.onSubmit}>
                                 <div className="row">
-                                    <div class="col span-1-of-3">
+                                    <div className="col span-1-of-3">
                                         <label htmlFor="name">Email Address</label>
                                     </div>
-                                    <div class="col span-2-of-3">
+                                    <div className="col span-2-of-3">
                                         <input 
+                                            className="forms__input"
                                             type="email" 
                                             name="email" 
                                             id="email" 
@@ -55,11 +56,12 @@ class Login extends Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div class="col span-1-of-3">
+                                    <div className="col span-1-of-3">
                                         <label htmlFor="password">Password</label>
                                     </div>
-                                    <div class="col span-2-of-3">
+                                    <div className="col span-2-of-3">
                                         <input 
+                                            className="forms__input"
                                             type="text" 
                                             name="password" 
                                             id="password" 
@@ -69,20 +71,20 @@ class Login extends Component {
                                         />
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col span-1-of-3">
+                                <div className="row">
+                                    <div className="col span-1-of-3">
                                         <label>&nbsp;</label>
                                     </div>
-                                    <div class="col span-2-of-3">
+                                    <div className="col span-2-of-3">
                                         <input className="btn btn-full" type="submit" value="Log In"/>
                                     </div>
                                 </div>     
                                                             
                                 <div>
-                                    <div class="col span-1-of-3">
+                                    <div className="col span-1-of-3">
                                         <label>&nbsp;</label>
                                     </div>
-                                    <div class="col span-2-of-3">
+                                    <div className="col span-2-of-3">
                                         <Link className="btn btn-ghost" to="/register">Register</Link>
                                     </div>
                                 </div>

@@ -18,6 +18,16 @@ export class Register extends Component {
             [e.target.name]: e.target.value 
         })
     }
+    onSubmit = (e) => {
+        e.preventDefault();
+        const newUser = {
+            name: this.state.name,
+            email: this.state.email,
+            password: this.state.password,
+            passsword2: this.state.password2
+        }
+        console.log(newUser);
+    }
     
     render() {
 
