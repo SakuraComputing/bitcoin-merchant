@@ -31,7 +31,9 @@ export class Register extends Component {
 
         axios.post('/api/users/register', newUser)
         .then(res => console.log(res.data))
-        .catch(err => console.log(err));
+        .catch(err => this.setState({
+            errors: err.response.data
+        }));
     }
 
     componentDidMount() {
@@ -61,6 +63,7 @@ export class Register extends Component {
                                     onChange={this.onChange}
                                     error={errors.name}
                                 />
+                                {errors.name && (<div className="invalid-entry">{errors.name}</div>)}
                             </div>
                         </div>
                         <div className="row">
@@ -79,6 +82,7 @@ export class Register extends Component {
                                     info="This site uses Gravatar so if you want a
                                         profile image, use a Gravatar email"
                                 />
+                                {errors.email && (<div className="invalid-entry">{errors.email}</div>)}
                             </div>
                         </div>
                         <div className="row">
@@ -95,6 +99,7 @@ export class Register extends Component {
                                     onChange={this.onChange}
                                     error={errors.password}
                                 />
+                                {errors.password && (<div className="invalid-entry">{errors.password}</div>)}
                             </div>
                         </div>
                         <div className="row">
@@ -111,6 +116,7 @@ export class Register extends Component {
                                     onChange={this.onChange}
                                     error={errors.password2}
                                 />
+                                {errors.password2 && (<div className="invalid-entry">{errors.password2}</div>)}
                             </div>
                         </div>
                         <div className="row">
