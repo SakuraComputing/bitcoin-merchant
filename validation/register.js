@@ -34,11 +34,11 @@ if (!Validator.isLength(data.name, { min: 2, max: 30 })) {
     }
 
     if (Validator.isEmpty(data.password2)) {
-    errors.password2 = 'Confirm Password field is required';
+        errors.password2 = 'Confirm Password field is required';
     }
 
     if (!Validator.equals(data.password, data.password2)) {
-    errors.password2 = 'Passwords must match';
+        errors.password2 = 'Passwords must match';
     }
 
     return {

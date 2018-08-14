@@ -25,7 +25,7 @@ export class Register extends Component {
             name: this.state.name,
             email: this.state.email,
             password: this.state.password,
-            passsword2: this.state.password2
+            password2: this.state.password2
         }
         console.log(newUser);
 
