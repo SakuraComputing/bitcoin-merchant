@@ -41,7 +41,7 @@ class Login extends Component {
                             <form onSubmit={this.onSubmit}>
                                 <div className="row">
                                     <div class="col span-1-of-3">
-                                        <label for="name">Email Address</label>
+                                        <label htmlFor="name">Email Address</label>
                                     </div>
                                     <div class="col span-2-of-3">
                                         <input 
@@ -56,7 +56,7 @@ class Login extends Component {
                                 </div>
                                 <div className="row">
                                     <div class="col span-1-of-3">
-                                        <label for="name">Password</label>
+                                        <label htmlFor="password">Password</label>
                                     </div>
                                     <div class="col span-2-of-3">
                                         <input 

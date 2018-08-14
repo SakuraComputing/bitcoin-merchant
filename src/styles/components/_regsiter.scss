@@ -1,0 +1,26 @@
+.register {
+    margin: 7%;
+}
+
+.register__container {
+    margin-top: 120px;
+    font-size: 100%;
+}
+
+.register__input {
+    padding: 5px;
+    font-size: 90%;
+    border-radius: 5px;
+}
+
+.lead-text {
+    position: absolute;
+    // width: 1140px;
+    top: 10%;
+    left: 50%;
+    margin-bottom: 25px;
+    font-size: 155%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
