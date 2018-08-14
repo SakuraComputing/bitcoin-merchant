@@ -144,23 +144,3 @@ input[type=submit] {
     line-height: 145%;
 }
 
-.form-box {
-    position: absolute;
-    width: 50%;
-    top: 0;
-    right: 20%;
-    // background-color: rgba(255, 255, 255, 0.8);
-    z-index: 10;
-    height: 630px;
-    padding-top: 40px;
-    margin-top: 90px;
-}
-
-.form-messages {
-    width: 70%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 3px;
-    margin-bottom: 30px;
-    color: #333;
-}
