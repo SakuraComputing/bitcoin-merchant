@@ -12,16 +12,17 @@ class Login extends Component {
         };
     }
 
-    onChange(e) {
+    onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     };
 
-    onSubmit(e) {
+    onSubmit = (e) => {
         e.preventDefault();
         const userData = {
             email: this.state.email,
             password: this.state.password
         };
+        console.log(userData);
         // this.props.loginUser(userData);
     };
     
@@ -36,7 +37,7 @@ class Login extends Component {
                         <h2 className="lead text-center">Sign in to your Bitcoin Merchant account</h2>
 
                     </div>
-                    <div className="form-box">
+                    <div className="login__container">
 
                             <form onSubmit={this.onSubmit}>
                                 <div className="row">

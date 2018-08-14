@@ -35,7 +35,7 @@ export class Register extends Component {
 
         return (
             <div className="register">
-                <p className="lead-text">Create your Bitcoin Merchant account today!</p>
+                <h2 className="lead text-center">Create your Bitcoin Merchant account today!</h2>
                 <div className="register__container">
                     <form noValidate onSubmit={this.onSubmit}>
                         <div className="row">
@@ -44,7 +44,7 @@ export class Register extends Component {
                             </div>
                             <div className="col span-2-of-3">
                                 <input
-                                    className="register__input"
+                                    className="forms__input"
                                     placeholder="Name"
                                     name="name"
                                     value={this.state.name}
@@ -60,7 +60,7 @@ export class Register extends Component {
                             </div>
                             <div className="col span-2-of-3">
                                 <input
-                                    className="register__input"
+                                    className="forms__input"
                                     placeholder="Email Address"
                                     name="email"
                                     value={this.state.email}
@@ -78,7 +78,7 @@ export class Register extends Component {
                             </div>
                             <div className="col span-2-of-3">
                                 <input
-                                    className="register__input"
+                                    className="forms__input"
                                     placeholder="Password"
                                     name="password"
                                     value={this.state.password}
@@ -94,7 +94,7 @@ export class Register extends Component {
                             </div>
                             <div className="col span-2-of-3">
                                 <input
-                                    className="register__input"
+                                    className="forms__input"
                                     placeholder="Confirm Password"
                                     name="password2"
                                     value={this.state.password2}
