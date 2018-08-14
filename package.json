@@ -5,6 +5,7 @@
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "bcryptjs": "^2.4.3",
@@ -42,7 +43,7 @@
     "dev-server": "webpack-dev-server --mode development",
     "api-start": "node server/server.js",
     "api-server": "nodemon server/server.js",
-    "dev": "concurrently \"yarn run api-server\" \"yarn run dev-server\"" 
+    "dev": "concurrently \"yarn run api-server\" \"yarn run dev-server\""
   },
   "devDependencies": {
     "webpack-cli": "^3.1.0"
