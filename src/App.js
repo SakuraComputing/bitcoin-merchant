@@ -11,6 +11,7 @@ import Navbar from './components/layout/Navbar';
 import LandingPage from './components/Layout/LandingPage';
 import Register from './components/auth/Register';
 import Login from './components/auth/login';
+import Vendors from './components/vending/vendors';
 
 // Check for Json Web Token
 
@@ -48,6 +49,7 @@ class App extends Component {
             <div>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/vendors" component={Vendors} />
             </div>
           </div>
         </Router>
