@@ -31,6 +31,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
         price: req.body.price,
         lowerlimit: req.body.lowerlimit,
         upperlimit: req.body.upperlimit,
+        currency: req.body.currency
     })
     newVendor.save().then(vendor => res.json(vendor));
 });

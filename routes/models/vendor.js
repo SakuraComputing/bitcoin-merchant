@@ -22,6 +22,10 @@ const VendorSchema = new Schema({
     upperlimit: {
         type: Number,
         required: true
+    },
+    currency: {
+        type: String,
+        required: true
     }
 })
 module.exports = Vendor = mongoose.model('vendor', VendorSchema);
