@@ -20,8 +20,6 @@ router.get('/', (req, res) => {
 // @access Private
 router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
 
-    console.log('Getting this far?');
-
     const { errors, isValid } = validateVendorInput(req.body);
     if(!isValid) {
         return res.status(400).json(errors);
@@ -36,7 +34,4 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
     })
     newVendor.save().then(vendor => res.json(vendor));
 });
-
-
-
 module.exports = router;
