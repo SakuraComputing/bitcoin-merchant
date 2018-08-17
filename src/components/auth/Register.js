@@ -10,6 +10,7 @@ export class Register extends Component {
         super()
         this.state = {
             name: '',
+            username: '',
             email: '',
             password: '',
             password2: '',
@@ -26,6 +27,7 @@ export class Register extends Component {
         e.preventDefault();
         const newUser = {
             name: this.state.name,
+            username: this.state.username,
             email: this.state.email,
             password: this.state.password,
             password2: this.state.password2
@@ -67,6 +69,23 @@ export class Register extends Component {
                                     error={errors.name}
                                 />
                                 {errors.name && (<div className="invalid-entry">{errors.name}</div>)}
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col span-1-of-3">
+                                <label htmlFor="name">User Name</label>
+                            </div>
+                            <div className="col span-2-of-3">
+                                <input
+                                    className="forms__input"
+                                    placeholder="User Name"
+                                    name="username"
+                                    value={this.state.username}
+                                    type="name"
+                                    onChange={this.onChange}
+                                    error={errors.username}
+                                />
+                                {errors.username && (<div className="invalid-entry">{errors.username}</div>)}
                             </div>
                         </div>
                         <div className="row">
