@@ -7,7 +7,7 @@ const VendorSchema = new Schema({
         type: String,
         required: true
     },
-    paymentMethod: {
+    paymentmethod: {
         type: String,
         required: true
     },
@@ -15,11 +15,11 @@ const VendorSchema = new Schema({
         type: Number,
         require: true
     },
-    lowerLimit: {
+    lowerlimit: {
         type: Number,
         required: true
     },
-    upperLimit: {
+    upperlimit: {
         type: Number,
         required: true
     }
