@@ -1,12 +1,11 @@
 .login {
     margin: 7%;
+
 }
 
 .login__container {
-    margin-top: 10px;
-    font-size: 100%;
+    margin-top: 50px;
 }
-
 
 .login-form {
     width: 90%;
@@ -16,10 +15,14 @@
 input[type=text],
 input[type=email],
 {
-    width: 100%;
+    width: 40%;
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #ccc;
+}
+
+.input-tag {
+    font-size: 90%;
 }
 
 .form-box {
@@ -34,6 +37,10 @@ input[type=email],
     margin-top: 90px;
 }
 
+.button-bar {
+    margin-top: 50px;
+}
+
 .form-messages {
     width: 70%;
     margin: 0 auto;
@@ -42,3 +49,5 @@ input[type=email],
     margin-bottom: 30px;
     color: #333;
 }
+
+
