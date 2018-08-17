@@ -49,6 +49,8 @@ class Login extends Component {
         
         const { errors } = this.state;
 
+        console.log("What are the errors?", errors)
+
         return (
             <div>
                 <div className="login">
@@ -71,6 +73,7 @@ class Login extends Component {
                                         onChange={this.onChange}
                                         error={errors.email}
                                     />
+                                    {errors.email && (<div className="invalid-entry">{errors.email}</div>)}
                                 </div>
                             </div>
                             <div className="row">
@@ -87,6 +90,7 @@ class Login extends Component {
                                         onChange={this.onChange}
                                         error={errors.password}
                                     />
+                                    {errors.password && (<div className="invalid-entry">{errors.password}</div>)}
                                 </div>
                             </div>
                             <div className="row">
