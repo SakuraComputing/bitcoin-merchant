@@ -1,11 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-// @route GET api/vendor/test
-// @desc Tests vendors route
+const Vendor = require('../models/vendor');
+
+// @route GET api/vendors
+// @desc Get vendors route
 // @access Public
-router.get('/vendors', (req, res) =>res.json({
-    msg: "Vendors Works"
-}));
+router.get('/', (req, res) => {
+    Vendor.find()
+        .then(vendors => res.json(vendors))
+        .catch(err => res.status(400).json({ novendorsfound: 'No Vendors found'}))
+});
+
+// @route PUT api/vendors
+// @desc Get vendors route
+// @access Private
+
+
 
 module.exports = router;
