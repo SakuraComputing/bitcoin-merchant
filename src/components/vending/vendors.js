@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
+import Spinner from '../common/Spinner';
 import { getVendors } from '../../actions/vendorActions';
 import Vendor from './Vendor';
 
@@ -17,7 +18,7 @@ class Vendors extends PureComponent {
     let vendor;
     
     if (vendors === null || loading ) {
-      vendor = "loading"
+      vendor = <Spinner />
     } else {
       if(vendors.length > 0) {
         vendor = vendors.map(vendor => (
