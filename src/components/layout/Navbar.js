@@ -17,7 +17,7 @@ class Navbar extends Component {
     const { isAuthenticated } = this.props.auth;
 
     const guestLinks = (
-      <li><a href="#login"><Link to="/login">Login / Register</Link></a></li>
+      <li><Link to="/login">Login / Register</Link></li>
     );
 
     const authLinks = (

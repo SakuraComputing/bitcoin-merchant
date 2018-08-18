@@ -32,8 +32,9 @@ class Vendors extends PureComponent {
     return (
       <div className="vendors">
         <h2>Purchase your coins from one of the vendors below</h2>
-        <p>what is happening</p>
-        {vendor}
+
+          {vendor}
+
       </div>
     )
   }
