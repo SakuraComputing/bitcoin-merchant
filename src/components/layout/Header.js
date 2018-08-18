@@ -6,7 +6,7 @@ const Header = () => {
         <div className="header-test">
                 <div className="merchant-text-box">
                     <h1>Bitcoin is making people rich.<br></br> You can become the next millionaire....</h1>
-                    <Link className="btn btn-full" to="/vendors">Buy Coins Now!</Link>
+                    <Link className="btn btn-full" to="/all">Buy Coins Now!</Link>
                     <a className="btn btn-ghost" href="#features">Find Out More</a>
                 </div>
         </div>

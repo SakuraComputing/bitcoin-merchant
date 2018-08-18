@@ -24,7 +24,7 @@ class Login extends Component {
     
     componentWillReceiveProps(nextProps) {
         if(nextProps.auth.isAuthenticated) {
-            this.props.history.push('/vendors');
+            this.props.history.push('/all');
         }
 
         if(nextProps.errors) {
@@ -48,8 +48,6 @@ class Login extends Component {
     render() {
         
         const { errors } = this.state;
-
-        console.log("What are the errors?", errors)
 
         return (
             <div>

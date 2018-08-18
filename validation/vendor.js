@@ -4,7 +4,6 @@ const isEmpty = require( './is-empty');
 module.exports = function validateVendorInput(data) {
 
     let errors = {};
-
     
     data.seller = !isEmpty(data.seller) ? data.seller: '';
     data.paymentmethod = !isEmpty(data.paymentmethod) ? data.paymentmethod: '';
