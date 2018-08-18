@@ -11,28 +11,29 @@
 }
 
 .vendor-col {
-    width: 150px;
+    width: 160px;
     border: 1px solid $star;
     padding: 1%;
     // height: 50px;
 }
 
 .vendor-col-2 {
-    width: 300px;
+    width: 350px;
     border: 1px solid $star;
     padding: 1%;
-    font-size: 80%;
+    // font-size: 90%;
 }
 
 .vendor-button {
     margin-left: 20px;
     border: solid 1px $white-main;
     background-color: $star;
-    width: 80px;
+    width: 100px;
     border-radius: 10%;
     font-size: 120%;
 }
 
 .vendor-button:hover {
     background-color: $sky;
+    border: $sky;
 }

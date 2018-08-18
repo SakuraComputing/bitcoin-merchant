@@ -16,10 +16,7 @@ export default class Vendor extends Component {
                 {vendor.price}
             </div>
             <div className="vendor-col">
-                {vendor.lowerlimit}
-            </div>
-            <div className="vendor-col">
-                {vendor.upperlimit}
+                {vendor.lowerlimit} - {vendor.upperlimit}
             </div>
             <div className="vendor-col">
                 {vendor.currency}
