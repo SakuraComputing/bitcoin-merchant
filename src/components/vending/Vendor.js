@@ -5,26 +5,26 @@ export default class Vendor extends Component {
 
     const { vendor } = this.props;
     return (
-      <div className="row">
-            <div className="col span-1-of-6">
+      <div className="vendor-container">
+            <div className="vendor-col">
                 {vendor.seller}
             </div>
-            <div className="col span-2-of-6">
-                {vendor.paymentmeyhod}
+            <div className="vendor-col">
+                {vendor.paymentmethod}
             </div>
-            <div className="col span-3-of-6">
+            <div className="vendor-col">
                 {vendor.price}
             </div>
-            <div className="col span-4-of-6">
+            <div className="vendor-col">
                 {vendor.lowerlimit}
             </div>
-            <div className="col span-5-of-6">
+            <div className="vendor-col">
                 {vendor.upperlimit}
             </div>
-            <div className="col span-6-of-6">
+            <div className="vendor-col">
                 {vendor.currency}
             </div>
-
+            <button className="vendor-button">Buy</button>
       </div>
     )
   }

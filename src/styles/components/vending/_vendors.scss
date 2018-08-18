@@ -3,3 +3,25 @@
     color: $star;
     margin: 7%;
 }
+
+.vendor-container {
+    margin: 2%;
+    display: flex;
+    font-size: 80%;
+}
+
+.vendor-col {
+    width: 150px;
+    border: 2px solid $mountain;
+    padding: 1%;
+    // height: 50px;
+}
+
+.vendor-button {
+    margin-left: 20px;
+    border: solid 0.5px $mountain;
+    background-color: $star;
+    width: 80px;
+    border-radius: 10%;
+    font-size: 120%;
+}
