@@ -9,7 +9,7 @@ export default class Vendor extends Component {
             <div className="vendor-col">
                 {vendor.seller}
             </div>
-            <div className="vendor-col">
+            <div className="vendor-col-2">
                 {vendor.paymentmethod}
             </div>
             <div className="vendor-col">
