@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import ReactNumberFormat from 'react-number-format';
+import NumberFormat from 'react-number-format';
 
 export default class Vendor extends Component {
   render() {
@@ -13,10 +15,12 @@ export default class Vendor extends Component {
                 {vendor.paymentmethod}
             </div>
             <div className="vendor-col">
-                {vendor.price}
+                <NumberFormat value={vendor.price} prefix={'£'} thousandSeparator={true} fixedDecimalScale={2}/>
             </div>
             <div className="vendor-col">
-                {vendor.lowerlimit} - {vendor.upperlimit}
+                <NumberFormat value={vendor.lowerlimit} prefix={'£'} thousandSeparator={true} fixedDecimalScale={2}/>
+                 -
+                <NumberFormat value={vendor.upperlimit} prefix={'£'} thousandSeparator={true} fixedDecimalScale={2}/>    
             </div>
             <div className="vendor-col">
                 {vendor.currency}
