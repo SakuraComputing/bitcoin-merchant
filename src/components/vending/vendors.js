@@ -33,8 +33,17 @@ class Vendors extends PureComponent {
       <div className="vendors">
         <h2>Purchase your coins from one of the vendors below</h2>
 
-          {vendor}
-
+        <div className="vendors">
+          <div className="vendor-container">
+                  <div className="vendor-col">Seller</div>
+                  <div className="vendor-col-2">Payment Type</div>
+                  <div className="vendor-col">Price</div>
+                  <div className="vendor-col">Lower and Upper limits</div>
+                  <div className="vendor-col">Currency</div>
+          </div>
+              {vendor}
+        </div>
+        {vendor}
       </div>
     )
   }
