@@ -27,7 +27,7 @@ class Vendor extends Component {
                 {vendor.currency}
             </div>
 
-                <Link to="/buy" className="vendor-button">Buy</Link>
+            <Link to="/buy" className="vendor-button">Buy</Link>
             
       </div>
     )

@@ -21,7 +21,7 @@ class Navbar extends Component {
     );
 
     const authLinks = (
-      <li><a href="logout"><Link onClick={this.onClick} to="/">Logout</Link></a></li>
+      <li><Link onClick={this.onClick} to="/">Logout</Link></li>
     )
 
     return (
