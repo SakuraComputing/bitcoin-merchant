@@ -23,9 +23,14 @@
 }
 
 .vendor-button {
+    color: $sky;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
     margin-left: 20px;
-    border: solid 1px $white-main;
+    padding-left: 30px;
     background-color: $star;
+    border: solid 1px $sky;
     width: 100px;
     border-radius: 10%;
     font-size: 120%;
@@ -35,5 +40,6 @@
 
 .vendor-button:hover {
     background-color: $sky;
-    border: $sky;
+    border: solid 1px $white-main;
+    color: $white-main;
 }
