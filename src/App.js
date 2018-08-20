@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
 import { dispatch } from '../node_modules/rxjs/internal/observable/range';
 import { setCurrentUser, logoutUser } from './actions/authActions';
+
 import { Provider } from 'react-redux';
 import store from './store';
+
+import PrivateRoute from './components/common/PrivateRoute';
+
 import '../src/styles/styles.scss';
 import Navbar from './components/layout/Navbar';
 import LandingPage from './components/Layout/LandingPage';
 import Register from './components/auth/Register';
 import Login from './components/auth/login';
 import Vendors from './components/vending/vendors';
+import BuyCoin from './components/vending/BuyCoin';
 
 // Check for Json Web Token
 
@@ -50,6 +55,13 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/all" component={Vendors} />
+              <Switch>
+                <PrivateRoute
+                  exact 
+                  path="/buy"
+                  component={BuyCoin}
+                />
+              </Switch>
             </div>
           </div>
         </Router>

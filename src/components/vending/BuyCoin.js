@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class BuyCoin extends Component {
+class BuyCoin extends React.Component {
     render() {
         return (
             <div>
@@ -9,3 +9,4 @@ export default class BuyCoin extends Component {
         )
     }
 }
+export default BuyCoin;
