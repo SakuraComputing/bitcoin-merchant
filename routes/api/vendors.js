@@ -15,6 +15,23 @@ router.get('/', (req, res) => {
         .catch(err => res.status(400).json({ novendorsfound: 'No Vendors found'}))
 });
 
+// @route GET api/vendor/id/:id
+// @desc Get vendor by id
+// @access Public
+router.get('/id/:id', (req, res) => {
+    const errors = {};
+    Profile.findOne({ id: req.params.id})
+        .then(vendor => {
+            if(!vendor) {
+                errors.vendor = 'No vendor exists';
+                res.status(404).json(errors);
+            }
+            res.json(profile);
+        })
+        .catch(err => res.status(404).json(errors));
+});
+
+
 // @route PUT api/vendors
 // @desc Get vendors route
 // @access Private

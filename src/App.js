@@ -54,13 +54,14 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/all" component={Vendors} />
-              <Switch>
-                <PrivateRoute
+              <Route 
                   exact 
-                  path="/buy"
+                  path="/vendor/:seller"
                   component={BuyCoin}
-                />
-              </Switch>
+              />                    
+              {/* <Switch>
+                <PrivateRoute/>
+              </Switch> */}
             </div>
           </div>
         </Router>
