@@ -29,6 +29,8 @@
     width: 100px;
     border-radius: 10%;
     font-size: 120%;
+    -webkit-transition: background-color 0.3s, border 0.3s, color 0.3s;
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
 .vendor-button:hover {
