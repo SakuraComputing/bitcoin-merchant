@@ -18,15 +18,15 @@ router.get('/', (req, res) => {
 // @route GET api/vendor/id/:id
 // @desc Get vendor by id
 // @access Public
-router.get('/id/:id', (req, res) => {
+router.get('/vendor/:seller', (req, res) => {
     const errors = {};
-    Profile.findOne({ id: req.params.id})
+    Vendor.findOne({ seller: req.params.seller})
         .then(vendor => {
             if(!vendor) {
                 errors.vendor = 'No vendor exists';
                 res.status(404).json(errors);
             }
-            res.json(profile);
+            res.json(vendor);
         })
         .catch(err => res.status(404).json(errors));
 });
