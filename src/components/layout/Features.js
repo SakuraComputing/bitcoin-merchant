@@ -14,7 +14,7 @@ const Features = () => {
             
             <div className="row js--wp-1">
                 <div className="col span-1-of-4 box">
-                    <Ionicon fontSize="50%" icon="ios-infinite-outline"></Ionicon>
+                    <Ionicon fontSize="50%" icon="ios-infinite-outline" color="#fff"></Ionicon>
                     <h3>Up to 365 days/year</h3>
                     <p>
                         Never work again! We really mean that. Once you get into Bitcoin trading you will find our ease of use service so incredible you can get on with your life.
