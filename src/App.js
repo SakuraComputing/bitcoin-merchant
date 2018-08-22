@@ -16,7 +16,7 @@ import LandingPage from './components/Layout/LandingPage';
 import Register from './components/auth/Register';
 import Login from './components/auth/login';
 import Vendors from './components/vending/vendors';
-import BuyCoin from './components/vending/BuyCoin';
+import Seller from './components/vending/Seller';
 
 // Check for Json Web Token
 
@@ -55,10 +55,9 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/all" component={Vendors} />
               <Route 
-                  exact 
-                  path="/vendor/:seller"
-                  component={BuyCoin}
-              />                    
+                  exact path="/seller/:seller"
+                  component={Seller}
+              ></Route>>                    
               {/* <Switch>
                 <PrivateRoute/>
               </Switch> */}

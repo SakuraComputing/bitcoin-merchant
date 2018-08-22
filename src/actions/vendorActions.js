@@ -1,4 +1,4 @@
-import { GET_VENDORS, VENDORS_LOADING } from "./types";
+import { GET_VENDORS, GET_VENDOR, VENDORS_LOADING } from "./types";
 import axios from 'axios';
 
 // Get all vendors
@@ -18,6 +18,25 @@ export const getVendors = () => dispatch => {
                 payload: null
             })
         })
+};
+
+// Get Vendor by seller
+export const getVendorBySellerId = (seller) => dispatch => {
+    dispatch(setVendorsLoading());
+    axios
+        .get(`/api/vendors/seller/${seller}`)
+        .then(res => {
+            dispatch({
+                type: GET_VENDOR,
+                payload: res.data
+            })
+        })
+        .catch(err => {
+            dispatch({
+                type: GET_VENDOR,
+                payload: null
+            })
+        })            
 };
 
 // Vendors Loading

@@ -8,7 +8,7 @@ class Vendor extends Component {
 
     const { vendor } = this.props;
     return (
-      <div className="vendor-container">
+        <div className="vendor-container">
             <div className="vendor-col">
                 {vendor.seller}
             </div>
@@ -27,7 +27,8 @@ class Vendor extends Component {
                 {vendor.currency}
             </div>
 
-            <Link to={`/vendor/${vendor.seller}`} className="vendor-button">Buy</Link>
+            
+            <Link to={`/seller/${vendor.seller}`} className="vendor-button">Buy</Link>
             
       </div>
     )
