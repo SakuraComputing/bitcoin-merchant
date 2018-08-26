@@ -10,7 +10,6 @@ class Seller extends React.Component {
 
     componentDidMount() {
         if(this.props.match.params.seller) {
-            // console.log(this.props.match.params.seller);
             this.props.getVendorBySellerId(this.props.match.params.seller);
         }
     }
@@ -35,7 +34,7 @@ class Seller extends React.Component {
                         <div className="col span-1-of-2 buyer-box">
 
                             <p>Buy bitcoin from: </p>
-                            <ul>
+                            <ul className="payment-calc">
 
                                 <li>Seller: </li>
                                 <li>Item: Bitcoin</li>

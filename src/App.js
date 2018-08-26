@@ -57,7 +57,7 @@ class App extends Component {
               <Route 
                   exact path="/seller/:seller"
                   component={Seller}
-              ></Route>>                    
+              ></Route>                    
               {/* <Switch>
                 <PrivateRoute/>
               </Switch> */}

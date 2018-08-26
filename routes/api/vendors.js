@@ -22,6 +22,7 @@ router.get('/seller/:seller', (req, res) => {
     const errors = {};
     Vendor.findOne({ seller: req.params.seller})
         .then(vendor => {
+            console.log("Gets here", vendor);
             if(!vendor) {
                 errors.novendor = 'No vendor exists';
                 res.status(404).json(errors);
