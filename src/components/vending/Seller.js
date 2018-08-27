@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Spinner from '../common/Spinner';
 import { getVendorBySellerId } from '../../actions/vendorActions';
 
@@ -30,7 +30,6 @@ class Seller extends React.PureComponent {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        console.log("Passed In", this.unitPrice.current.value )
         const calcValue = this.unitPrice.current.value * value
         this.setState({ 
             [name]: value,
@@ -60,37 +59,48 @@ class Seller extends React.PureComponent {
                             <ul className="payment-calc">
                                 <li>Item: Bitcoin</li>
                                 <li>Number of coins: 
-                                    <input className="forms__input" 
-                                            name="numberCoins"
-                                            ref={this.numberCoins}
-                                            type="number" 
-                                            onChange={this.handleCoinChange}
-                                            value={this.state.numberCoins}
-                                    ></input>
+                                    <span className="coin-input">
+                                        <input className="forms__input" 
+                                                name="numberCoins"
+                                                ref={this.numberCoins}
+                                                type="number" 
+                                                onChange={this.handleCoinChange}
+                                                value={this.state.numberCoins}
+                                                step=".01"
+                                                min="0.00"
+                                                data-number-to-fixed="2"
+                                        ></input>
+                                    </span>
                                 </li>
                                 <li>Unit Price: 
-                                    <input className="forms__input" 
-                                            name="unitPrice"
-                                            ref={this.unitPrice}
-                                            type="number" 
-                                            min="0.00" 
-                                            defaultValue={vendor.price} 
-                                    >
-                                    </input>
+                                    <span className="coin-input">
+                                        <input className="forms__input" 
+                                                name="unitPrice"
+                                                ref={this.unitPrice}
+                                                type="number" 
+                                                min="0.00" 
+                                                defaultValue={vendor.price} 
+                                                disabled={true}
+                                        >
+                                        </input>
+                                    </span>
                                 </li>
                                 <li>Total Cost: 
-                                    <input className="forms__input" 
-                                            name="totalCost"
-                                            ref={this.totalCost}
-                                            type="number" 
-                                            value={this.state.totalCost}
-                                            onChange={this.handleCoinChange}
-                                    >
-                                    </input></li>
+                                    <span className="coin-input">
+                                        <input className="forms__input" 
+                                                name="totalCost"
+                                                ref={this.totalCost}
+                                                type="number" 
+                                                value={this.state.totalCost}
+                                                onChange={this.handleCoinChange}
+                                                disabled={true}
+                                        >
+                                        </input>
+                                    </span>
+                                </li>
                                 <li>{vendor.paymentmethod}</li>
                             </ul>
-                            {/* <Link></Link> */}
-                            {/* <Link className="btn btn-full" to="/" /> */}
+                            <Link className="btn btn-full coin-input" to="/">Purchase Coins</Link>
                         </div>
                         <div className="col span-1-of-2 buyer-box">
                             <p>

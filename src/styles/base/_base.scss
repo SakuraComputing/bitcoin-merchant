@@ -143,3 +143,8 @@ input[type=submit] {
     line-height: 145%;
 }
 
+input:focus,
+input:hover {
+    outline: none;
+}
+
