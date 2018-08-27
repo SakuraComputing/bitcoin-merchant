@@ -6,9 +6,19 @@ import Spinner from '../common/Spinner';
 import { getVendorBySellerId } from '../../actions/vendorActions';
 
 
-class Seller extends React.Component {
+class Seller extends React.PureComponent {
 
+    constructor() {
+        super()
+        this.state = {
+            numberCoins: 1,
+            totalCost: 1
+        }
+    }
 
+    numberCoins = React.createRef();
+    unitPrice = React.createRef();
+    totalCost = React.createRef();
     
     componentDidMount() {
         if(this.props.match.params.seller) {
@@ -16,8 +26,16 @@ class Seller extends React.Component {
         }
     }
 
-    handleChange = (e) => {
-        console.log(e);
+    handleCoinChange = (event) => {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        console.log("Passed In", this.unitPrice.current.value )
+        const calcValue = this.unitPrice.current.value * value
+        this.setState({ 
+            [name]: value,
+            totalCost: calcValue
+        })
     }
 
     render() {
@@ -30,7 +48,7 @@ class Seller extends React.Component {
         if( vendor === null || vendor === undefined || loading ) {
             sellerContent = <Spinner />
         } else {
-            console.log("Help", vendor);
+            // console.log("Render", this.state, this.props);
             sellerContent = (
                 <div> 
                     <h2>
@@ -41,9 +59,34 @@ class Seller extends React.Component {
                             <p>Buy bitcoin from: {vendor.seller}</p>
                             <ul className="payment-calc">
                                 <li>Item: Bitcoin</li>
-                                <li>Amount: <input className="forms__input" type="text" ></input></li>
-                                <li>Price: <input className="forms__input" type="number" min="0.00" value={vendor.price} onChange={this.handleChange}></input></li>
-                                <li>Unit: <input className="forms__input" type="text"></input></li>
+                                <li>Number of coins: 
+                                    <input className="forms__input" 
+                                            name="numberCoins"
+                                            ref={this.numberCoins}
+                                            type="number" 
+                                            onChange={this.handleCoinChange}
+                                            value={this.state.numberCoins}
+                                    ></input>
+                                </li>
+                                <li>Unit Price: 
+                                    <input className="forms__input" 
+                                            name="unitPrice"
+                                            ref={this.unitPrice}
+                                            type="number" 
+                                            min="0.00" 
+                                            defaultValue={vendor.price} 
+                                    >
+                                    </input>
+                                </li>
+                                <li>Total Cost: 
+                                    <input className="forms__input" 
+                                            name="totalCost"
+                                            ref={this.totalCost}
+                                            type="number" 
+                                            value={this.state.totalCost}
+                                            onChange={this.handleCoinChange}
+                                    >
+                                    </input></li>
                                 <li>{vendor.paymentmethod}</li>
                             </ul>
                             {/* <Link></Link> */}
