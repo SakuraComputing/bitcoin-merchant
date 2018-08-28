@@ -12,7 +12,7 @@ function Works() {
                 </div>
                 <div className="row">
                     <div className="col span-1-of-2 steps-box">
-                        <img src={bitcoinImage} alt="Bitcoin Merchant app on iPhone" className="app-screen js--wp-2"/>
+                        <img src="src/styles/img/bitcoin.jpg" alt="Bitcoin Merchant app on iPhone" className="app-screen js--wp-2"/>
                     </div>
                     <div className="col span-1-of-2 steps-box">
                         <div className="works-step">
@@ -28,8 +28,8 @@ function Works() {
                             <p>Begin trading right away!</p>   
                         </div>
                         
-                        <a href="#" className="btn-app"><img src={appleStore} alt="App Store Button"/></a>
-                        <a href="#" className="btn-app"><img src={googlePlay} alt="Play Store Button"/></a>
+                        <a href="#" className="btn-app"><img src="src/styles/img/download-app.svg" alt="App Store Button"/></a>
+                        <a href="#" className="btn-app"><img src="src/styles/img/download-app-android.png" alt="Play Store Button"/></a>
                     </div>
                 </div>
             </section>            

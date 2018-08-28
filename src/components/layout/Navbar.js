@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
-import bitcoin from '../../styles/img/bitcoin-logo.jpg';
 
 class Navbar extends Component {
 
@@ -28,8 +27,7 @@ class Navbar extends Component {
       <div>
             <nav>
                 <div className="row">
-                    <img src={bitcoin} alt="Bitcoin Merchant Logo" className="logo"/>
-                    <img src={bitcoin} alt="Bitcoin Merchant Logo" className="logo-black"/>
+                    <img src="src/styles/img/bitcoin-logo.jpeg" alt="Bitcoin Merchant Logo" className="logo"/>
                     <ul className="main-nav">
                         <li><a href="#features">Safety First</a></li>
                         <li><a href="#works">How it Works</a></li>

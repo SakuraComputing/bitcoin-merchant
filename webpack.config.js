@@ -21,11 +21,22 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif|jpeg|eot|woff|woff2|ttf)$/,
-                use: {
-                    loader: 'file-loader'
-                }
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'src/styles/img/',
+                            publicPath: 'src/styles/img/'
+                        }
+                    }
+                ]    
             }
         ]
+    },
+    performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
     },
     devtool: 'cheap-module-eval-source-map',
     devServer: {

@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
         .catch(err => res.status(400).json({ novendorsfound: 'No Vendors found'}))
 });
 
-// @route GET api/vendor/seller/:seller
+// @route GET api/vendor/seller/:_id
 // @desc Get vendor by seller
 // @access Public
 router.get('/seller/:seller', (req, res) => {
@@ -26,9 +26,17 @@ router.get('/seller/:seller', (req, res) => {
                 errors.novendor = 'No vendor exists';
                 res.status(404).json(errors);
             }
+            // console.log("Response", vendor)
             res.json(vendor);
         })
-        .catch(err => res.status(404).json(errors));
+        .catch((error) => {
+            if(error.response) {
+                console.log(error)
+            } else {
+                console.log("Server error", error)
+            }
+        });
+        // .catch(err => res.status(404).json(errors));
 });
 
 
