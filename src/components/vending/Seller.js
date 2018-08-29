@@ -11,14 +11,13 @@ class Seller extends React.PureComponent {
     constructor() {
         super()
         this.state = {
-            numberCoins: 1,
-            totalCost: 1
+            numberCoins: 1
         }
     }
 
     numberCoins = React.createRef();
     unitPrice = React.createRef();
-    totalCost = React.createRef();
+
     
     componentDidMount() {
         if(this.props.match.params.seller) {
@@ -41,7 +40,6 @@ class Seller extends React.PureComponent {
 
         const { vendor, loading } = this.props.vendor;
 
-        
         let sellerContent;
         
         if( vendor === null || vendor === undefined || loading ) {
@@ -88,9 +86,8 @@ class Seller extends React.PureComponent {
                                     <span className="coin-input">
                                         <input className="forms__input coin__input" 
                                                 name="totalCost"
-                                                ref={this.totalCost}
                                                 type="number" 
-                                                value={this.state.totalCost}
+                                                value={this.state.totalCost ? this.state.totalCost : vendor.price}
                                                 onChange={this.handleCoinChange}
                                                 disabled={true}
                                         >
