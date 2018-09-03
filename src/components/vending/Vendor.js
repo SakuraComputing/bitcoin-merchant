@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactNumberFormat from 'react-number-format';
 import NumberFormat from 'react-number-format';
 import { Link } from 'react-router-dom';
 
@@ -16,12 +15,12 @@ class Vendor extends Component {
                 {vendor.paymentmethod}
             </div>
             <div className="vendor-col">
-                <NumberFormat value={vendor.price} prefix={'£'} thousandSeparator={true} />
+                <NumberFormat type="currency" value={vendor.price} prefix={'£'} thousandSeparator={true} />
             </div>
             <div className="vendor-col">
-                <NumberFormat value={vendor.lowerlimit} prefix={'£'} thousandSeparator={true}/>
+                <NumberFormat type="currency" value={vendor.lowerlimit} prefix={'£'} thousandSeparator={true}/>
                  -
-                <NumberFormat value={vendor.upperlimit} prefix={'£'} thousandSeparator={true}/>    
+                <NumberFormat type="currency" value={vendor.upperlimit} prefix={'£'} thousandSeparator={true}/>    
             </div>
             <div className="vendor-col">
                 {vendor.currency}

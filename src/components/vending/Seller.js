@@ -18,7 +18,6 @@ class Seller extends React.PureComponent {
 
     numberCoins = React.createRef();
 
-    
     componentDidMount() {
         if(this.props.match.params.seller) {
             this.props.getVendorBySellerId(this.props.match.params.seller);
@@ -34,7 +33,6 @@ class Seller extends React.PureComponent {
             [name]: value,
             totalCost: calcValue
         })
-        console.log("Total Cost ", this.state, value, this.props.vendor.vendor.price);
     }
 
     render() {
@@ -58,7 +56,7 @@ class Seller extends React.PureComponent {
                                 <li>Item: Bitcoin</li>
                                 <li>Number of coins: 
                                     <span className="coin-input">
-                                        <input className="forms__input coin__input" 
+                                        <input className="forms__input currency__input" 
                                                 name="numberCoins"
                                                 ref={this.numberCoins}
                                                 type="number" 
@@ -72,9 +70,10 @@ class Seller extends React.PureComponent {
                                 </li>
                                 <li>Unit Price: 
                                     <span className="coin-input">
-                                        <CurrencyInput className="forms__input coin__input" 
+                                        <CurrencyInput className="forms__input currency__input" 
                                                 precision="2"
                                                 prefix="£"
+                                                inputType="currency"
                                                 thousandSeparator=","
                                                 decimalSeparator="."                                    
                                                 name="unitPrice"
@@ -86,9 +85,10 @@ class Seller extends React.PureComponent {
                                 </li>
                                 <li>Total Cost: 
                                     <span className="coin-input">
-                                        <CurrencyInput className="forms__input coin__input" 
+                                        <CurrencyInput className="forms__input currency__input" 
                                                 precision="2"
                                                 prefix="£"
+                                                inputType="currency"
                                                 thousandSeparator=","
                                                 decimalSeparator="."
                                                 name="totalCost"
