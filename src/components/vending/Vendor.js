@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NumberFormat from 'react-number-format';
+import CurrencyInput from 'react-currency-input';
 import { Link } from 'react-router-dom';
 
 class Vendor extends Component {
@@ -15,12 +15,30 @@ class Vendor extends Component {
                 {vendor.paymentmethod}
             </div>
             <div className="vendor-col">
-                <NumberFormat type="currency" value={vendor.price} prefix={'£'} thousandSeparator={true} />
+                <CurrencyInput 
+                    type="currency" 
+                    value={vendor.price} 
+                    prefix={'£'} 
+                    className="forms__input currency__input"
+                    disabled={true}
+                />
             </div>
             <div className="vendor-col">
-                <NumberFormat type="currency" value={vendor.lowerlimit} prefix={'£'} thousandSeparator={true}/>
+                <CurrencyInput 
+                    type="currency" 
+                    value={vendor.lowerlimit} 
+                    prefix={'£'} 
+                    className="forms__input currency__input"
+                    disabled={true}
+                />
                  -
-                <NumberFormat type="currency" value={vendor.upperlimit} prefix={'£'} thousandSeparator={true}/>    
+                <CurrencyInput 
+                    type="currency" 
+                    value={vendor.upperlimit} 
+                    prefix={'£'} 
+                    className="forms__input currency__input"
+                    disabled={true}
+                />    
             </div>
             <div className="vendor-col">
                 {vendor.currency}
