@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import CurrencyInput from 'react-currency-input';
 import Spinner from '../common/Spinner';
 import { getVendorBySellerId } from '../../actions/vendorActions';
 
@@ -16,7 +17,6 @@ class Seller extends React.PureComponent {
     }
 
     numberCoins = React.createRef();
-    unitPrice = React.createRef();
 
     
     componentDidMount() {
@@ -29,11 +29,12 @@ class Seller extends React.PureComponent {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        const calcValue = this.unitPrice.current.value * value
+        const calcValue = this.props.vendor.vendor.price * value
         this.setState({ 
             [name]: value,
             totalCost: calcValue
         })
+        console.log("Total Cost ", this.state, value, this.props.vendor.vendor.price);
     }
 
     render() {
@@ -71,27 +72,30 @@ class Seller extends React.PureComponent {
                                 </li>
                                 <li>Unit Price: 
                                     <span className="coin-input">
-                                        <input className="forms__input coin__input" 
+                                        <CurrencyInput className="forms__input coin__input" 
+                                                precision="2"
+                                                prefix="£"
+                                                thousandSeparator=","
+                                                decimalSeparator="."                                    
                                                 name="unitPrice"
-                                                ref={this.unitPrice}
-                                                type="number" 
-                                                min="0.00" 
-                                                defaultValue={vendor.price} 
+                                                value={vendor.price} 
                                                 disabled={true}
                                         >
-                                        </input>
+                                        </CurrencyInput>
                                     </span>
                                 </li>
                                 <li>Total Cost: 
                                     <span className="coin-input">
-                                        <input className="forms__input coin__input" 
+                                        <CurrencyInput className="forms__input coin__input" 
+                                                precision="2"
+                                                prefix="£"
+                                                thousandSeparator=","
+                                                decimalSeparator="."
                                                 name="totalCost"
-                                                type="number" 
                                                 value={this.state.totalCost ? this.state.totalCost : vendor.price}
-                                                onChange={this.handleCoinChange}
                                                 disabled={true}
                                         >
-                                        </input>
+                                        </CurrencyInput>
                                     </span>
                                 </li>
                                 <li>{vendor.paymentmethod}</li>
