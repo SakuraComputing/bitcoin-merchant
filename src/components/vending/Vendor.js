@@ -8,13 +8,13 @@ class Vendor extends Component {
     const { vendor } = this.props;
     return (
         <div className="vendor-container">
-            <div className="vendor-col">
+            <div className="vendor-col vendor__col_seller">
                 {vendor.seller}
             </div>
-            <div className="vendor-col-2">
+            <div className="vendor-col vendor__col_paymenttype">
                 {vendor.paymentmethod}
             </div>
-            <div className="vendor-col">
+            <div className="vendor-col vendor__col_pricepercoin">
                 <CurrencyInput 
                     type="currency" 
                     value={vendor.price} 
@@ -23,7 +23,7 @@ class Vendor extends Component {
                     disabled={true}
                 />
             </div>
-            <div className="vendor-col">
+            <div className="vendor-col vendor__col_limit">
                 <CurrencyInput 
                     type="currency" 
                     value={vendor.lowerlimit} 
@@ -31,7 +31,8 @@ class Vendor extends Component {
                     className="forms__input currency__input"
                     disabled={true}
                 />
-                 -
+            </div>    
+            <div className="vendor-col vendor__col_limit">
                 <CurrencyInput 
                     type="currency" 
                     value={vendor.upperlimit} 
@@ -40,7 +41,7 @@ class Vendor extends Component {
                     disabled={true}
                 />    
             </div>
-            <div className="vendor-col">
+            <div className="vendor-col vendor__col_currency">
                 {vendor.currency}
             </div>
 

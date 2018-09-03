@@ -11,16 +11,32 @@
 }
 
 .vendor-col {
-    width: 150px;
     border: 1px solid $star;
     padding: 1%;
 }
 
-.vendor-col-2 {
-    width: 340px;
-    border: 1px solid $star;
-    padding: 1%;
+.vendor__col_seller {
+    width: 160px;
 }
+.vendor__col_paymenttype {
+    width: 200px;
+}
+.vendor__col_pricepercoin {
+    width: 180px;
+}
+.vendor__col_limit {
+    width: 180px;
+}
+.vendor__col_currency {
+    width: 100px;
+}
+
+.vendor__col_option {
+    width: 100px;
+    margin-left: 20px;
+    border-style: none;
+}
+
 
 .vendor-button {
     color: $sky;
