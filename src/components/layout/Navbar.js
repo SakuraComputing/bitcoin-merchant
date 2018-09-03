@@ -27,7 +27,8 @@ class Navbar extends Component {
       <div>
             <nav>
                 <div className="row">
-                    <img src="/src/styles/img/bitcoin-logo.jpeg" alt="Bitcoin Merchant Logo" className="logo"/>
+                    <Link to="/"><img src="/src/styles/img/bitcoin-logo.jpeg" alt="Bitcoin Merchant Logo" className="logo"/></Link>
+                    
                     <ul className="main-nav">
                         <li><a href="#features">Safety First</a></li>
                         <li><a href="#works">How it Works</a></li>
