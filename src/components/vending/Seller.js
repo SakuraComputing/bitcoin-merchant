@@ -100,7 +100,7 @@ class Seller extends React.PureComponent {
                                 </li>
                                 <li>{vendor.paymentmethod}</li>
                             </ul>
-                            <Link className="btn btn-full coin-input" to="/">Purchase Coins</Link>
+                            <Link className="btn btn-full coin-input" to="/payment/">Purchase Coins</Link>
                         </div>
                         <div className="col span-1-of-2 buyer-box">
                             <p>

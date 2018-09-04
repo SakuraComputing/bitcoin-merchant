@@ -16,6 +16,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/login';
 import Vendors from './components/vending/vendors';
 import Seller from './components/vending/Seller';
+import Purchase from './components/vending/Purchase';
 
 // Check for Json Web Token
 
@@ -54,6 +55,7 @@ class App extends Component {
               <Route exact path="/login" component={Login} />
               <Route exact path="/all" component={Vendors} />
               <Route exact path="/seller/:seller" component={Seller} />
+              <Route exact path="/payment" component={Purchase} />
             </div>
           </div>
         </Router>
