@@ -63,10 +63,10 @@ class Purchase extends Component {
           <h2>Purchase Bitcoin</h2>
           <div className="row">
             <div className="col span-1-of-3 buyer-box">
-                Amount
+                <h3>Amount</h3>
             </div>
             <div className="col span-2-of-3 buyer-box">
-                Credit Card Details
+                <h3>Credit Card Details</h3>
                 <div className="cc__row">
                     <Card 
                         number={this.state.number}
@@ -82,7 +82,7 @@ class Purchase extends Component {
                     <input
                         type="tel"
                         name="number"
-                        className="forms__input"
+                        className="forms__input cc__number"
                         placeholder="Card Number"
                         pattern="[\d| ]{16,22}"
                         required
@@ -113,20 +113,20 @@ class Purchase extends Component {
                         onFocus={this.handleInputFocus}
                     />
                     <input
-                    type="tel"
-                    name="cvc"
-                    className="forms__input"
-                    placeholder="CVC"
-                    pattern="\d{3,4}"
-                    required
-                    onChange={this.handleInputChange}
-                    onFocus={this.handleInputFocus}
+                        type="tel"
+                        name="cvc"
+                        className="forms__input cc__cvc"
+                        placeholder="CVC"
+                        pattern="\d{3,4}"
+                        required
+                        onChange={this.handleInputChange}
+                        onFocus={this.handleInputFocus}
                     />
                 </div>
-                <input type="hidden" name="issuer" value={this.state.issuer} />
                 <div >
-                <button className="vendor-button">PAY</button>
+                    <button className="vendor-button cc__pay">PAY</button>
                 </div>
+                <input type="hidden" name="issuer" value={this.state.issuer} />
             </form>
           </div>
           {this.state.formData && (

@@ -37,7 +37,6 @@
     border-style: none;
 }
 
-
 .vendor-button {
     color: $sky;
     text-decoration: none;
@@ -67,5 +66,22 @@
 }
 .cc__row {
     padding: 5px 0;
-    margin-left: 5%;
+    margin: 0 5%;
+}
+
+.cc__number {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cc__cvc {
+    margin-left: 4%;
+}
+
+.cc__pay {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding-left: 0;
+    padding: 16px;
 }
